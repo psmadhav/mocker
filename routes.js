@@ -1,7 +1,4 @@
-module.exports = [
-	{
-		route:'/xyz',
-		method:'get',
-		handler:(req, res) => res.send(['xyz']) 
-	}
-]
+module.exports = [].concat(
+	require('./services/blockchain-service'),
+	require('./services/currency-service')
+)

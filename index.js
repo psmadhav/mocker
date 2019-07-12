@@ -8,7 +8,7 @@ const port = 9998
 app.use(bodyParser.json());
 morganBody(app);
 
-mockedRoutes = require('./routes')
+const mockedRoutes = require('./routes')
 for(var i=0;i<mockedRoutes.length;++i) {
 	let r = mockedRoutes[i]
 	if(r.handler) {
